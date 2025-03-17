@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+body{font-family: "Orbitron", sans-serif; color: #333;}
+
+.header{width: 400px;height: 100vh; background: linear-gradient(45deg,aqua,royalblue); padding:200px 3vw 100px; box-sizing: border-box; color: #fff; display: flex; flex-direction: column; justify-content: space-between; position: fixed; left: 0; top: 0; transition: all 0.5s;}
+.title>p{ font-size: 40px; font-weight: bold;}
+.line{width: 50%; border-top: 2px solid #fff; margin: 30px 0;}
+.title::after{content: "UI/UX DEVELOPMENT"; display: block;}
+.sns{display: flex;}
+.sns>li{margin-right: 10px;}
+/*header 미디어쿼리*/
+@media all and (max-width:1599px){
+.header{width: 350px;}
+
+}
+@media all and (max-width:1199px){
+ .header{width:100%; height:80px ; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
+ .title>p{ font-size: 24px;}
+ .title>p>br{display: none;}
+ .line,.title::after{display: none;}
+ .sns>li{margin: 0 15px;}
+ .sns>li span{display: none;}
+ .sns>li i{font-size: 20px;}
+}
+
+.main{margin-left: 400px; background-color: #efefef; box-sizing: border-box;padding: 30px 20px;}
+.btns{display: flex; justify-content: flex-end;}
+.btns>li{margin:0 10px; background-color: #fff; padding: 5px 30px; font-size: 12px; border-radius: 5px; cursor: pointer; box-shadow: 0 0 20px rgba(0,0,0,0.15);}
+.btns>li.active{background: linear-gradient(45deg,aqua,royalblue); color: #fff;box-shadow: 3px 3px 30px rgba(0, 255, 255,0.5)}
+
+.contents{margin-top: 30px; display: flex; flex-wrap: wrap;}
+.box{width: 20%;padding: 12px; box-sizing: border-box;}
+.inner{background-color: #fff; padding: 12px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.15);}
+.inner>a{display: block;}
+.inner img{width: 100%;}
+.inner p:nth-of-type(1){ font-weight: bold;line-height: 30px;}
+.inner p:nth-of-type(2){ font-size: 11px;}
+
+/*main 미디어쿼리*/
+@media all and (max-width:1599px){
+.main{margin-left: 350px;}
+.box{width: 25%;}
+}
+@media all and (max-width:1199px){
+ .header{position: absolute;}
+ .main{margin-left: 0px; padding-top: 100px;}
+ .contents{margin-top: 10px;}
+}
+@media all and (max-width:900px){
+ .box{width: 33%;}
+
+}
+@media all and (max-width:680px){
+ .box{width: 50%;}
+
+}
+@media all and (max-width:539px){
+ .box{width: 100%;}
+ .btns>li{width: 30%; text-align: center; margin: 0 5px;}
+
+}
+
