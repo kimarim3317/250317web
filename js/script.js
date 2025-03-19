@@ -11,3 +11,4 @@ $(".btns>li").click(function(){
 
 $(".fancybox").fancybox();
 
+setTimeout(function(){$(".contents").isotope('layout')},100)
